@@ -12,7 +12,8 @@ function Header(props) {
     const searchApi = (event) => {
         setSearch(event.target.value)
     }
-    const searchResult = () => {
+    const searchResult = (e) => {
+        e.preventDefault()
         if (search === "") {
             setMessage("le nom est pas bon ou exister pas")
         } else {
