@@ -26,9 +26,9 @@ function Footer() {
                     <a className="btn-resaux" style={{ backgroundColor: "#0082ca" }} href="#" target="blank"><i class="fab fa-linkedin-in"></i></a>
                     <a className="btn-resaux" style={{ backgroundColor: "#333333" }} href="https://github.com/joelmpy" target="blank"><i class="fa-brands fa-github"></i></a>
                 </section>
-                
+
                 <div className="text-end">
-                    <span>© 2020 Copyright:</span>
+                    <span>© 2022 Copyright:</span>
                 </div>
             </div>
         </div>

@@ -1,18 +1,14 @@
-.main-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+.main-page{
     background-color:#000000ac ;
-}
+     padding-left: 1rem;
+     padding-block: 1rem;
+     max-width: 700px;
+      }
+    
 
 .main-page h1 {
-    font-size: 60px;
-    margin-bottom: 50px;
+    font-size: 4.7vw;
+    margin-bottom: 40px;
     font-weight: bold;
     text-transform: uppercase;
     color: white;
@@ -20,8 +16,8 @@
 
 .main-page p {
     color: white;
-    margin-bottom: 40px;
-    font-size: 1.2em ;
+    margin-bottom: 35px;
+    font-size: 1.4vw ;
     font-weight: bold;
 }
 
@@ -40,3 +36,29 @@
     transition: 0.5s;
 }
 
+@media  screen and (max-width : 600px) {
+    .main-page{
+        background-color:#00000064 ;
+         padding-left: 1rem;
+         padding-block: 1rem;
+         max-width: 400px;
+          }
+    .main-page .btn {
+        display: none;
+        /* padding: 9px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width:200px; */
+    }
+    .main-page h1 {
+        margin-bottom: 20px;
+        font-size:1em;
+        text-align: center;
+    }
+    .main-page p {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 0.8em;
+    }
+}

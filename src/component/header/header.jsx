@@ -1,5 +1,5 @@
 import Info from "../info/info"
-import "./header.css"
+import styles from "./header.module.css"
 import { useState } from 'react';
 
 
@@ -9,11 +9,9 @@ function Header(props) {
     const [result, setResult] = useState(false);
     const [message, setMessage] = useState("");
 
-
     const searchApi = (event) => {
         setSearch(event.target.value)
     }
-
     const searchResult = () => {
         if (search === "") {
             setMessage("le nom est pas bon ou exister pas")
@@ -38,10 +36,7 @@ function Header(props) {
 
                     console.log(error)
                 });
-
-
         }
-
     }
     const home = () => {
         props.info([])
@@ -49,28 +44,31 @@ function Header(props) {
         setMessage("");
     }
 
-
     return (
-        <header style={{ backgroundImage: result ? `url(${result.image})` : null }} >
-            <nav className="nav">
-                <div className="logo">
-                    <h2>Logo</h2>
-                </div>
-                <ul className="list-items">
-                    <li><a onClick={home} href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#power">Power</a></li>
-                </ul>
-                <div className="search-bar">
-                    <div className="search-input">
-                    <input type="text" value={search} onChange={searchApi} placeholder="personnage : batman" />
-                    <button onClick={searchResult} className="search-btn">search</button>
+        <>
+            <nav className={styles.navbar}>
+                <div className={styles.navbarContent}>
+                    <div className={styles.navTitle}>
+                        <h2>Logo</h2>
                     </div>
+                    <ul className={styles.nav}>
+                        <li className={styles.navLink}><a onClick={home} href="#">Home</a></li>
+                        <li className={styles.navLink}><a href="#about">About</a></li>
+                        <li className={styles.navLink}><a href="#power">Power</a></li>
+                    </ul>
+
+                    <form className={styles.form}>
+                        <input className={styles.input} type="search" value={search} onChange={searchApi} placeholder="personnage : batman" />
+                        <button onClick={searchResult} className="fas fa-search" ></button>
+                    </form>
                     <p className="errormsg" style={{ color: 'red' }}>{message}</p>
                 </div>
             </nav>
-            <Info data={result} />
-        </header>
+
+            <header className={styles.header} style={{ backgroundImage: result ? `url(${result.image})` : null }}>
+                <Info data={result} />
+            </header>
+        </>
     )
 }
 

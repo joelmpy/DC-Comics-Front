@@ -1,12 +1,12 @@
 /* Police d'ecriture */
 
+
 h1 {
-    
+    font-size: 5.9vw;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
 h2 {
-
     font-family: 'Lobster', cursive;
 }
 
