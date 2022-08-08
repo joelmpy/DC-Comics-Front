@@ -16,7 +16,7 @@ function Header(props) {
         if (search === "") {
             setMessage("le nom est pas bon ou exister pas")
         } else {
-            const url = `http://localhost:8006/hero/${search}`
+            const url = `https://dc-comic.herokuapp.com/hero/${search}`
 
             fetch(url).then((response) => {
                 if (response.ok) {
