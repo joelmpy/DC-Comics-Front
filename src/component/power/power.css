@@ -7,16 +7,15 @@
     width: 100%;
 }
 
-hr {
-    color: white;
-    height: 3px;
-    margin-bottom: 4px;    
+.hr {
+    background-color: hsl(210 11% 15%);
+    height: 20px;
 }
 
 .main-power h2 {
     margin-bottom: 20px;
     margin-top: 1em;
-    font-size:2.7vw;
+    font-size: 2.7vw;
     color: white;
 }
 
@@ -40,6 +39,7 @@ hr {
     margin-top: 2em;
     height: 60vh;
     width: 100%;
+    margin-bottom: 2em;
 
 }
 
@@ -54,14 +54,13 @@ hr {
     .main-power h2 {
         margin-bottom: 20px;
         margin-top: none;
-        font-size:1.2em;
+        font-size: 1.2em;
     }
 
 
     .power-img img {
-         height: 60vh;
-         width: 70%;
+        height: 50vh;
+        width: 85%;
         margin-top: 7px;
     }
 }
-

@@ -5,7 +5,7 @@ import power from './assets/hero.jpg'
 function Power(props) {
   return (
     <div id="power">
-          <hr/>
+      <div className="hr"></div>
     <section className="main-power">
       <h2>Power</h2>
       <p>Ses pouvoirs :</p>
