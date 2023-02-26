@@ -17,7 +17,7 @@ function Header(props) {
         if (search === "") {
             setMessage("le nom est pas bon ou exister pas")
         } else {
-            const url = `https://dc-comic.herokuapp.com/hero/${search}`
+            const url = `https://dc-comics-back-d5y4.vercel.app/hero/${search}`
 
             fetch(url).then((response) => {
                 if (response.ok) {
